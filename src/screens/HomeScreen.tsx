@@ -102,8 +102,8 @@ export default function HomeScreen({ navigation }: Props) {
         })}
 
         <Text style={styles.footNote}>
-          지금은 Level 1~7 콘텐츠가 준비돼 있어요. 나머지 단계는 구조만 잡혀 있고
-          콘텐츠는 순차 확장됩니다.
+          지금은 Level 1~20 콘텐츠가 준비돼 있어요. 생성 콘텐츠는 검증 자동화를
+          통과한 뒤 순차 보강됩니다.
         </Text>
       </ScrollView>
     </SafeAreaView>

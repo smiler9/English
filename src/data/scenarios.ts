@@ -1,4 +1,5 @@
 import { Scenario } from '../engine/conversationEngine';
+import { GENERATED_SCENARIOS } from './generatedScenarios';
 
 /**
  * AI 회화 시나리오 (정해진 대본).
@@ -7,6 +8,7 @@ import { Scenario } from '../engine/conversationEngine';
  * 지금은 초급자가 "무슨 말을 할지" 추천 문장으로 도와준다.
  */
 export const SCENARIOS: Record<string, Scenario> = {
+  ...GENERATED_SCENARIOS,
   'greet-first-meeting': {
     id: 'greet-first-meeting',
     steps: [

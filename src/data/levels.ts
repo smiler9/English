@@ -6,11 +6,23 @@ import { LEVEL_4_UNITS } from './level04';
 import { LEVEL_5_UNITS } from './level05';
 import { LEVEL_6_UNITS } from './level06';
 import { LEVEL_7_UNITS } from './level07';
+import { LEVEL_8_UNITS } from './level08';
+import { LEVEL_9_UNITS } from './level09';
+import { LEVEL_10_UNITS } from './level10';
+import { LEVEL_11_UNITS } from './level11';
+import { LEVEL_12_UNITS } from './level12';
+import { LEVEL_13_UNITS } from './level13';
+import { LEVEL_14_UNITS } from './level14';
+import { LEVEL_15_UNITS } from './level15';
+import { LEVEL_16_UNITS } from './level16';
+import { LEVEL_17_UNITS } from './level17';
+import { LEVEL_18_UNITS } from './level18';
+import { LEVEL_19_UNITS } from './level19';
+import { LEVEL_20_UNITS } from './level20';
 
 /**
  * 20개 영어 등급 = 앱의 뼈대.
- * 구조(20개)는 지금 전부 정의하고, 실제 콘텐츠(units)는 Level 1~7부터 채운다.
- * → 나중에 Level 7, 8... 콘텐츠만 추가하면 앱이 자란다.
+ * 구조(20개)는 지금 전부 정의하고, 실제 콘텐츠(units)는 Level 1~20까지 채운다.
  *
  * CEFR 매핑으로 난이도 기준을 고정:
  *   L1~4 = A1, L5~7 = A2, L8~11 = B1, L12~15 = B2, L16~18 = C1, L19~20 = C2
@@ -94,6 +106,7 @@ export const LEVELS: Level[] = [
     cando: ['어제 한 일 말하기', '경험 말하기', '단어 1400개'],
     targetVocab: 1400,
     color: '#ffd166',
+    units: LEVEL_8_UNITS,
   },
   {
     id: 9,
@@ -103,6 +116,7 @@ export const LEVELS: Level[] = [
     cando: ['식당·호텔·공항·쇼핑', '계획 말하기', '상황극 대화'],
     targetVocab: 1700,
     color: '#ffd166',
+    units: LEVEL_9_UNITS,
   },
   {
     id: 10,
@@ -112,6 +126,7 @@ export const LEVELS: Level[] = [
     cando: ['비교해서 말하기', '자기 경험 설명', '발음·문법 피드백'],
     targetVocab: 2000,
     color: '#ffd166',
+    units: LEVEL_10_UNITS,
   },
   {
     id: 11,
@@ -121,6 +136,7 @@ export const LEVELS: Level[] = [
     cando: ['경험·완료 표현', '긴 대화 유지', '단어 2400개'],
     targetVocab: 2400,
     color: '#ffd166',
+    units: LEVEL_11_UNITS,
   },
   {
     id: 12,
@@ -130,6 +146,7 @@ export const LEVELS: Level[] = [
     cando: ['긴 문장 만들기', '설명 덧붙이기', '단어 2800개'],
     targetVocab: 2800,
     color: '#ff9f68',
+    units: LEVEL_12_UNITS,
   },
   {
     id: 13,
@@ -139,6 +156,7 @@ export const LEVELS: Level[] = [
     cando: ['의견 말하기', '이유 설명하기', '취미·일 대화'],
     targetVocab: 3200,
     color: '#ff9f68',
+    units: LEVEL_13_UNITS,
   },
   {
     id: 14,
@@ -148,6 +166,7 @@ export const LEVELS: Level[] = [
     cando: ['가정 상황 말하기', '자연스러운 표현 교정', '단어 3600개'],
     targetVocab: 3600,
     color: '#ff9f68',
+    units: LEVEL_14_UNITS,
   },
   {
     id: 15,
@@ -157,6 +176,7 @@ export const LEVELS: Level[] = [
     cando: ['뉴스·이슈 대화', '복잡한 문장', '단어 4000개'],
     targetVocab: 4000,
     color: '#ff9f68',
+    units: LEVEL_15_UNITS,
   },
   {
     id: 16,
@@ -166,6 +186,7 @@ export const LEVELS: Level[] = [
     cando: ['관용표현 사용', '뉘앙스 이해', '단어 4800개'],
     targetVocab: 4800,
     color: '#c98bff',
+    units: LEVEL_16_UNITS,
   },
   {
     id: 17,
@@ -175,6 +196,7 @@ export const LEVELS: Level[] = [
     cando: ['토론하기', '논리적으로 말하기', '단어 5600개'],
     targetVocab: 5600,
     color: '#c98bff',
+    units: LEVEL_17_UNITS,
   },
   {
     id: 18,
@@ -184,6 +206,7 @@ export const LEVELS: Level[] = [
     cando: ['회의·이메일·발표', '격식 표현', '단어 6500개'],
     targetVocab: 6500,
     color: '#c98bff',
+    units: LEVEL_18_UNITS,
   },
   {
     id: 19,
@@ -193,6 +216,7 @@ export const LEVELS: Level[] = [
     cando: ['면접·협상', '미묘한 뉘앙스', '단어 7500개'],
     targetVocab: 7500,
     color: '#ff6b9d',
+    units: LEVEL_19_UNITS,
   },
   {
     id: 20,
@@ -202,6 +226,7 @@ export const LEVELS: Level[] = [
     cando: ['어떤 주제든 프리토킹', '고급 문장·관용표현', '원어민 수준 대응'],
     targetVocab: 8000,
     color: '#ff6b9d',
+    units: LEVEL_20_UNITS,
   },
 ];
 

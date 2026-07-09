@@ -16,7 +16,7 @@ if [[ -n "${SSH_KEY:-}" ]]; then
   RSYNC_SSH="ssh -i $SSH_KEY"
 fi
 
-npm run typecheck
+npm run check
 npm run export:web
 
 ssh "${SSH_ARGS[@]}" "$SSH_TARGET" "sudo mkdir -p '$REMOTE_DIR' && sudo chown -R \$USER:\$USER '$REMOTE_DIR'"

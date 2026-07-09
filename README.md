@@ -49,6 +49,25 @@ SSH_TARGET=opc@오라클_PUBLIC_IP SSH_KEY=~/.ssh/oracle.key npm run deploy:orac
 
 Oracle 보안 목록/방화벽에서 TCP 80/443 포트를 열어야 브라우저에서 HTTP/HTTPS로 접속할 수 있습니다.
 
+## 검증 자동화
+
+콘텐츠를 추가한 뒤에는 아래 명령으로 앱 타입과 커리큘럼 데이터를 함께 검증합니다.
+
+```bash
+npm run check
+```
+
+검증 항목:
+- Level 1~20 구조와 준비된 레벨의 유닛 수 규칙
+- 중복 level/unit/lesson id
+- 누락된 회화 scenario id
+- 레슨 순서와 content kind 일치
+- 단어/문법/듣기/말하기/복습/테스트의 필수 필드
+- 객관식 정답 인덱스 범위
+- 문장 조립 answer token이 bank에 포함되는지
+
+`npm run deploy:oracle`은 배포 전에 `npm run check`를 자동 실행합니다. GitHub에 push하거나 PR을 만들면 `.github/workflows/validate.yml`에서도 같은 검증이 실행됩니다.
+
 ## 구조 (핵심 설계)
 
 ```
@@ -73,6 +92,8 @@ src/
 └─ screens/                 # Home → Level → Lesson / Conversation
 server/
 └─ english_training_api.py  # SQLite 기반 로그인·진도 API
+scripts/
+└─ validate-content.js      # 커리큘럼/시나리오 자동 검증
 ```
 
 ### 왜 이렇게?

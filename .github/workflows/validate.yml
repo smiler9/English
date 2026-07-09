@@ -1,0 +1,32 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Check app and content
+        run: npm run check
+
+      - name: Check server scripts
+        run: |
+          python3 -m py_compile server/english_training_api.py
+          bash -n scripts/deploy-oracle.sh
+          bash -n scripts/deploy-oracle-api.sh
+          bash -n scripts/setup-oracle-caddy.sh

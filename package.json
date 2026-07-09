@@ -28,7 +28,9 @@
     "setup:oracle": "bash scripts/setup-oracle-caddy.sh",
     "deploy:oracle": "bash scripts/deploy-oracle.sh",
     "deploy:oracle-api": "bash scripts/deploy-oracle-api.sh",
+    "check": "npm run typecheck && npm run validate:content",
     "typecheck": "tsc --noEmit",
+    "validate:content": "node scripts/validate-content.js",
     "web": "expo start --web"
   },
   "private": true
